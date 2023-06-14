@@ -40,22 +40,20 @@ export const TaskController = () => {
   };
   //---------------------------
 
+
   //----------DELETE-----------
   // Delete Tasks Handler
-/* <- Delete this line
   const deleteTask = (task: Task) => {
-    deleteTaskMutation.mutate({  });
+    deleteTaskMutation.mutate({ id: task.id });
   };
   //Delete Tasks Mutation
   const deleteTaskMutation = api.task.delete.useMutation({
     onSuccess: reload,
   });
- Delete this line -> */
-  //---------------------------
 
   return {
     handleToggleCompleted: updateTask,
-    // -> UNCOMMENT THIS LINE handleDelete: deleteTask,
+    handleDelete: deleteTask,
     getFilteredTasks: getTasks,
     handleSubmit: createTask,
   };

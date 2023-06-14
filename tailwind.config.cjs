@@ -5,6 +5,9 @@ const config = {
     extend: {},
   },
   plugins: [require("daisyui")],
+  daisyui: {
+    themes: ["cupcake"]
+  }
 };
 
 module.exports = config;
